@@ -22,18 +22,21 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             transform.position += Vector3.forward * speed * Time.deltaTime;
+            transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
+
         }
         //if pressing S moves player back
         if (Input.GetKey(KeyCode.S))
         {
             transform.position += Vector3.back * speed * Time.deltaTime;
+            transform.rotation = Quaternion.Euler(new Vector3(0f, 180f, 0f));
         }
         //if the player is pressing A
         if (Input.GetKey(KeyCode.A))
         {
             //the player moves left
             transform.position += Vector3.left * speed * Time.deltaTime;
-            //transform.rotation = Quaternion.Euler(new Vector3(0f, 180f, 0f));
+            transform.rotation = Quaternion.Euler(new Vector3(0f, 270f, 0f));
             //facingRight = false;
         }
         //if the player is pressing D
@@ -41,7 +44,7 @@ public class PlayerController : MonoBehaviour
         {
             //the player moves right
             transform.position += Vector3.right * speed * Time.deltaTime;
-            //transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
+            transform.rotation = Quaternion.Euler(new Vector3(0f, 90f, 0f));
             //facingRight = true;
         }
 
