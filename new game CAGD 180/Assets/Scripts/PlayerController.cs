@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 1f;
-    private Camera mainCamera;
+    private Camera mainCam;
     private Rigidbody rb;
 
 
@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        mainCamera = FindObjectOfType<Camera>();
+        mainCam = FindObjectOfType<Camera>();
     }
 
     // Update is called once per frame
@@ -49,15 +49,19 @@ public class PlayerController : MonoBehaviour
             //transform.rotation = Quaternion.Euler(new Vector3(0f, 90f, 0f));
             //facingRight = true;
         }
-
-
+        
 
     }
 
-    /*
+
+
+
+
+
+    
     void FixedUpdate()
     {
-        Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+        Ray cameraRay = mainCam.ScreenPointToRay(Input.mousePosition);
         Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
         float rayLength;
         if (groundPlane.Raycast(cameraRay, out rayLength))
@@ -69,6 +73,6 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-    */
+    
 
 }
