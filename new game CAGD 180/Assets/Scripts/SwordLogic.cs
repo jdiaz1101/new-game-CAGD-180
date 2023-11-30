@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Remstedt, Reed
+// 12/1/2023
+// Handles sword visibiliy and attack timing
+
 public class SwordLogic : MonoBehaviour
 {
 
     public Vector3 playerPos;
     public GameObject player;
 
-    public MeshRenderer SwordSwingHitBox;
-    public MeshRenderer StabHitBox;
+    public GameObject SwordSwingHitBox;
+    public GameObject StabHitBox;
     public bool AttackReady = true;
 
 
@@ -18,9 +22,9 @@ public class SwordLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SwordSwingHitBox.enabled = false;
-        StabHitBox.enabled = false;
-        
+        SwordSwingHitBox.SetActive(false);
+        StabHitBox.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -33,7 +37,7 @@ public class SwordLogic : MonoBehaviour
                 StartCoroutine(StabAttack());
             }
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             if (AttackReady)
             {
@@ -45,19 +49,19 @@ public class SwordLogic : MonoBehaviour
     IEnumerator StabAttack()
     {
         AttackReady = false;
-        StabHitBox.enabled = true;
+        StabHitBox.SetActive(true);
         yield return new WaitForSeconds(0.2f);
-        StabHitBox.enabled = false;
+        StabHitBox.SetActive(false);
         yield return new WaitForSeconds(0.1f);
         AttackReady = true;
     }
     IEnumerator SwingAttack()
     {
         AttackReady = false;
-        yield return new WaitForSeconds(0.4f);
-        SwordSwingHitBox.enabled = true;
+        yield return new WaitForSeconds(0.1f);
+        SwordSwingHitBox.SetActive(true);
         yield return new WaitForSeconds(0.2f);
-        SwordSwingHitBox.enabled = false;
+        SwordSwingHitBox.SetActive(false);
         yield return new WaitForSeconds(0.5f);
         AttackReady = true;
     }

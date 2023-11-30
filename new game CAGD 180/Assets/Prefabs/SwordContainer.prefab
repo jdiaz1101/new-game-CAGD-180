@@ -260,6 +260,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPos: {x: 0, y: 0, z: 0}
   player: {fileID: 6010939787920854540, guid: ad7572a7424495f49b11f703f11b33c7, type: 3}
-  SwordSwingHitBox: {fileID: 8432102499383706920}
-  StabHitBox: {fileID: 5040016947364209311}
+  SwordSwingHitBox: {fileID: 8008348482327619072}
+  StabHitBox: {fileID: 7088826662583398823}
   AttackReady: 1
