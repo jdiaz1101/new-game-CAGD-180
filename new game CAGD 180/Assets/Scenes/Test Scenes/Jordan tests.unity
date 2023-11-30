@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &796603376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4626405772619400631, guid: f123102e4ec65a249af4fd5cc7c34a50, type: 3}
+  m_PrefabInstance: {fileID: 8976382855135104742}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1308134770
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,6 +337,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2075506763}
+  - component: {fileID: 2075506764}
   - component: {fileID: 2075506762}
   - component: {fileID: 2075506761}
   m_Layer: 0
@@ -383,7 +389,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -408,13 +414,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075506760}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.70710576, y: -0, z: -0, w: 0.7071079}
+  m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &2075506764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075506760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fa610972306e7418510c9382db1fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 796603376}
+  offset: {x: 0, y: 40, z: 0}
 --- !u!1001 &8976382855135104742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -425,15 +445,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3144125774238974141, guid: f123102e4ec65a249af4fd5cc7c34a50, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.3947792
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3144125774238974141, guid: f123102e4ec65a249af4fd5cc7c34a50, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2499962
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3144125774238974141, guid: f123102e4ec65a249af4fd5cc7c34a50, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.03231117
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3144125774238974141, guid: f123102e4ec65a249af4fd5cc7c34a50, type: 3}
       propertyPath: m_LocalRotation.w
