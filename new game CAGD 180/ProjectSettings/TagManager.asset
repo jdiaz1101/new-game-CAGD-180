@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SwordSwingHitBox
   - StabHitBox
+  - Arrow
   layers:
   - Default
   - TransparentFX
