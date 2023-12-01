@@ -49,6 +49,10 @@ public class PlayerController : MonoBehaviour
             //transform.rotation = Quaternion.Euler(new Vector3(0f, 90f, 0f));
             //facingRight = true;
         }
+        if (Input.GetKey(KeyCode.Keypad1))
+        {
+
+        }
         
 
     }
