@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Remstedt, Reed
-// 12/1/2023
+// 12/5/2023
 // Handles sword visibiliy and attack timing
 
 public class SwordLogic : MonoBehaviour
@@ -37,7 +37,7 @@ public class SwordLogic : MonoBehaviour
                 StartCoroutine(StabAttack());
             }
         }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        if (Input.GetMouseButtonUp(0))
         {
             if (AttackReady)
             {
@@ -52,7 +52,7 @@ public class SwordLogic : MonoBehaviour
         StabHitBox.SetActive(true);
         yield return new WaitForSeconds(0.2f);
         StabHitBox.SetActive(false);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.3f);
         AttackReady = true;
     }
     IEnumerator SwingAttack()
