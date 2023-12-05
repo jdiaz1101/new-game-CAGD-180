@@ -17,7 +17,7 @@ public class SwordLogic : MonoBehaviour
     public bool AttackReady = true;
 
 
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -65,4 +65,6 @@ public class SwordLogic : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         AttackReady = true;
     }
+
+
 }

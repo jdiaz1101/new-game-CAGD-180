@@ -10,7 +10,7 @@ public class ZombieScript : MonoBehaviour
     private int health = 100;
     public Material Zombie;
     public Material ZombieHurt;
-  
+    public PlayerController pController;
  
 
     // Start is called before the first frame update
@@ -24,7 +24,9 @@ public class ZombieScript : MonoBehaviour
     {
         if (health <= 0)
         {
-            StartCoroutine(Death());
+            //StartCoroutine(Death());
+            EnemyDeath();
+            pController.totalPoints += 10;
         }
     }
 
@@ -55,6 +57,8 @@ public class ZombieScript : MonoBehaviour
         GetComponent<MeshRenderer>().material = Zombie;
     }
 
+
+    /*
     IEnumerator Death()
 
     {
@@ -64,5 +68,13 @@ public class ZombieScript : MonoBehaviour
         gameObject.SetActive(false);
 
        
+    }
+    */
+    private void EnemyDeath()
+    {
+        if (health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
