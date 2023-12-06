@@ -7,6 +7,8 @@ TagManager:
   - SwordSwingHitBox
   - StabHitBox
   - Arrow
+  - Sword
+  - Store
   layers:
   - Default
   - TransparentFX

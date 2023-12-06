@@ -6,7 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 1f;
     private Camera mainCam;
-    public Rigidbody rb;
+    private Rigidbody rb;
+    public int totalPoints = 0;
+    public float health = 10;
 
 
     // Start is called before the first frame update
@@ -53,11 +55,7 @@ public class PlayerController : MonoBehaviour
             transform.position += Vector3.right * speed * Time.deltaTime;
             //transform.rotation = Quaternion.Euler(new Vector3(0f, 90f, 0f));
             //facingRight = true;
-        }
-        if (Input.GetKey(KeyCode.Keypad1))
-        {
-
-        }
+        }  
 
         
     }
@@ -79,6 +77,12 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-    
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+    }
+
 
 }

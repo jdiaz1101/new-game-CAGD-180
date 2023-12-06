@@ -1,15 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 // Remstedt, Reed
-// 12/1/2023
+// 12/5/2023
 
 public class ZombieScript : MonoBehaviour
 {
     private int health = 100;
     public Material Zombie;
     public Material ZombieHurt;
+    public PlayerController pController;
+
+    public TMP_Text ZombiesKilledText;
+
+
+    public int ZombiesThisWave = 0;
+    public int zombiesKilled = 0;
   
  
 
@@ -24,8 +32,11 @@ public class ZombieScript : MonoBehaviour
     {
         if (health <= 0)
         {
-            StartCoroutine(Death());
+            //StartCoroutine(Death());
+            EnemyDeath();
+            pController.totalPoints += 10;
         }
+       // ZombiesKilledText.text = "ZombiesKilled: " + zombiesKilled.ToString();
     }
 
     public void OnTriggerEnter(Collider other)
@@ -55,6 +66,8 @@ public class ZombieScript : MonoBehaviour
         GetComponent<MeshRenderer>().material = Zombie;
     }
 
+
+    /*
     IEnumerator Death()
 
     {
@@ -62,7 +75,18 @@ public class ZombieScript : MonoBehaviour
         GetComponent<MeshRenderer>().material = ZombieHurt;
         yield return new WaitForSeconds(0.3f);
         gameObject.SetActive(false);
+        //canvas.GetComponent<UIManegment>().ZombiesKilledText.ToString(); 
+        zombiesKilled += 1;
+        
 
        
+    }
+    */
+    private void EnemyDeath()
+    {
+        if (health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
