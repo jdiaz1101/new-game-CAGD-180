@@ -6,9 +6,9 @@ public class Arrow : MonoBehaviour
 {
     public float speed;
 
-    public bool goingRight;
+    public bool shootStraight;
 
-    
+    public bool goingStraight;
     
 
 
@@ -21,14 +21,11 @@ public class Arrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (goingRight)
+        if (shootStraight)
         {
-            transform.position += transform.right * speed * Time.deltaTime;
+            transform.position += Vector3.forward* speed * Time.deltaTime;
         }
-        else
-        {
-            transform.position += transform.right * speed * Time.deltaTime;
-        }
+        
     }
 
     public void OnTriggerEnter(Collider other)

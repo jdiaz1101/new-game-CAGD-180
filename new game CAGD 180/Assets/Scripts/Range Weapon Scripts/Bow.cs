@@ -1,86 +1,60 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class Bow : MonoBehaviour
 {
 
     public GameObject arrowPrefab;
 
-   
+    
+
+    
+
+    private Transform aimTransform;
 
     public float spawnrate = 1f;
     public float fireRate;
+    public float force = 0f;
 
-    public bool shootRight = false;
+    public bool shootStraight = false;
     public bool arrowShot = false;
     public bool arrow = false;
-    public bool facingRight = true;
+    public bool facingStraight = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //aimTransform = transform.Find("Bow");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+        
+        
+
+        if (Input.GetMouseButtonUp(1) && arrowShot == false)
         {
-            if (facingRight == true)
-            {
-                facingRight = false;
-            }
+
+            GameObject arrowHolder;
+            arrowHolder = Instantiate(arrowPrefab, transform.position, transform.rotation);
+
+            //arrowHolder.transform.Rotate(Vector3.right * 90);
+
+            Rigidbody rb;
+            rb = arrowHolder.GetComponent<Rigidbody>();
+
+            rb.AddForce(transform.forward * force);
+
+            Destroy(arrowHolder, 5.0f); //destroys object
+
+
         }
 
-        if (Input.GetKey(KeyCode.D))
-        {
-            if (facingRight == false)
-            {
-                facingRight = true;
-            }
-        }
-
-        if (Input.GetMouseButtonUp(1))
-        {
-            if (arrow == true)
-            {
-                ShootArrow();
-            }
-        }
-
-    }
-
-    private void ShootArrow()
-    {
-        GameObject arrowInstance = Instantiate(arrowPrefab, transform.position, transform.rotation);
-
-        arrow = true;
-
-        if (facingRight == true)
-        {
-            arrowInstance.GetComponent<Arrow>().goingRight = shootRight;
-        }
-        else
-        {
-            arrowInstance.GetComponent<Arrow>().goingRight = false;
-
-        }
-        StartCoroutine(FireRate());
-
-    }
-
-    private void ArrowActive(bool active)
-    {
-        arrow = true;
-    }
-
-    IEnumerator FireRate()
-    {
-        arrowShot = true;
-        yield return new WaitForSeconds(0.5f);
-        arrowShot = false;
+        
     }
 
 

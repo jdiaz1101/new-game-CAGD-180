@@ -6,20 +6,25 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 1f;
     private Camera mainCam;
-    private Rigidbody rb;
-
+    public Rigidbody rb;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        
         rb = GetComponent<Rigidbody>();
         mainCam = FindObjectOfType<Camera>();
+        
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
+
         //if pressing W moves player forward
         if (Input.GetKey(KeyCode.W))
         {
@@ -53,16 +58,13 @@ public class PlayerController : MonoBehaviour
         {
 
         }
-        
 
+        
     }
 
 
 
 
-
-
-    
     void FixedUpdate()
     {
         Ray cameraRay = mainCam.ScreenPointToRay(Input.mousePosition);
@@ -71,7 +73,7 @@ public class PlayerController : MonoBehaviour
         if (groundPlane.Raycast(cameraRay, out rayLength))
         {
             Vector3 pointToLook = cameraRay.GetPoint(rayLength);
-            Debug.DrawLine(cameraRay.origin, pointToLook, Color.yellow);
+            Debug.DrawLine(cameraRay.origin, pointToLook, Color.green);
 
             transform.LookAt(new Vector3 (pointToLook.x, transform.position.y, pointToLook.z));
         }
