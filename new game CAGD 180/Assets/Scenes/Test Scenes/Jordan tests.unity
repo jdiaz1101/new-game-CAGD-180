@@ -707,10 +707,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 611477289994986282, guid: f123102e4ec65a249af4fd5cc7c34a50, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.27
-      objectReference: {fileID: 0}
     - target: {fileID: 3144125774238974141, guid: f123102e4ec65a249af4fd5cc7c34a50, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -755,21 +751,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player w/ Bow and Arrow
       objectReference: {fileID: 0}
-    - target: {fileID: 5073379554035082235, guid: f123102e4ec65a249af4fd5cc7c34a50, type: 3}
-      propertyPath: speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5597027178922940315, guid: f123102e4ec65a249af4fd5cc7c34a50, type: 3}
-      propertyPath: m_Mass
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784671817194081608, guid: f123102e4ec65a249af4fd5cc7c34a50, type: 3}
+    - target: {fileID: 5005439388634085001, guid: f123102e4ec65a249af4fd5cc7c34a50, type: 3}
       propertyPath: force
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8784671817194081608, guid: f123102e4ec65a249af4fd5cc7c34a50, type: 3}
-      propertyPath: m_Enabled
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

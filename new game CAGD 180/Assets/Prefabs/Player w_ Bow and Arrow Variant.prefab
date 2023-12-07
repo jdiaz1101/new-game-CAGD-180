@@ -47,7 +47,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 1559958273222686991, guid: 50514edf1a3e4d844a78b223901b3fbc, type: 3}
   spawnrate: 1
   fireRate: 0
-  force: 100
+  force: 10
   shootStraight: 0
   arrowShot: 0
   arrow: 0
