@@ -52,6 +52,10 @@ public class Arrow : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+        Destroy(this.gameObject);
+    }
 
 
 

@@ -42,19 +42,32 @@ public class Bow : MonoBehaviour
             GameObject arrowHolder;
             arrowHolder = Instantiate(arrowPrefab, transform.position, transform.rotation);
 
-            //arrowHolder.transform.Rotate(Vector3.right * 90);
+            arrow = true;
 
             Rigidbody rb;
             rb = arrowHolder.GetComponent<Rigidbody>();
 
             rb.AddForce(transform.forward * force);
 
-            Destroy(arrowHolder, 5.0f); //destroys object
+            Destroy(arrowHolder, 5.0f); // destroys arrow
 
+            StartCoroutine(FireRate());
 
         }
 
         
+    }
+
+    private void ArrowActive(bool active)
+    {
+        arrow = true;
+    }
+
+    IEnumerator FireRate()
+    {
+        arrowShot = true;
+        yield return new WaitForSeconds(0.5f);
+        arrowShot = false;
     }
 
 
