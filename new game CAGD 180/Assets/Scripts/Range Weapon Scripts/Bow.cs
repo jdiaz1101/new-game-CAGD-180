@@ -50,6 +50,7 @@ public class Bow : MonoBehaviour
             rb.AddForce(transform.forward * force);
 
             Destroy(arrowHolder, 5.0f); // destroys arrow
+            
 
             StartCoroutine(FireRate());
 
