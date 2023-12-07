@@ -195,6 +195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player w_ Bow and Arrow Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6140426889778341952, guid: ad7572a7424495f49b11f703f11b33c7, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -227,7 +231,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4626405772619400631}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 10
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
