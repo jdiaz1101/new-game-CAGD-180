@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1098575597608043076}
   m_Layer: 0
   m_Name: Zombie
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,3 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Zombie: {fileID: 2100000, guid: 7a39645481187024a8bb5a775a3f573e, type: 2}
   ZombieHurt: {fileID: 2100000, guid: 6b387df3ce32c1a4fb21a97498bc3072, type: 2}
+  pController: {fileID: 0}
+  ZombiesKilledText: {fileID: 0}
+  ZombiesThisWave: 0
+  zombiesKilled: 0

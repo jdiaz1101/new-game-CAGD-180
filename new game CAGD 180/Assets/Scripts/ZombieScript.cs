@@ -8,7 +8,9 @@ using TMPro;
 
 public class ZombieScript : MonoBehaviour
 {
-    private int health = 100;
+    public GameObject zombiePrefab;
+
+    public int health = 100;
     public Material Zombie;
     public Material ZombieHurt;
     public PlayerController pController;
@@ -18,13 +20,21 @@ public class ZombieScript : MonoBehaviour
 
     public int ZombiesThisWave = 0;
     public int zombiesKilled = 0;
+
+    
+
+
+    
   
+    
  
 
     // Start is called before the first frame update
     void Start()
     {
        GetComponent<MeshRenderer>().material = Zombie;
+       
+        
     }
 
     // Update is called once per frame
@@ -53,6 +63,15 @@ public class ZombieScript : MonoBehaviour
             Debug.Log("colided with stab hit box");
             health += -33;
             StartCoroutine(IsHurt());
+
+        }
+        if (other.gameObject.tag == "Arrow")
+        {
+            
+            health -= 25;
+            StartCoroutine(IsHurt());
+            
+            Debug.Log("Arrow hits");
 
         }
     }
@@ -89,4 +108,13 @@ public class ZombieScript : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    public void ApplyDamage(int amount)
+    {
+        health -= amount;
+
+        EnemyDeath();
+
+    }
+
 }
