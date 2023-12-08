@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     public int totalPoints = 0;
     public float health = 10;
+    private int healthCost = 10;
 
     public int maxHealth = 100;
 
@@ -81,6 +82,7 @@ public class PlayerController : MonoBehaviour
             transform.LookAt(new Vector3 (pointToLook.x, transform.position.y, pointToLook.z));
         }
 
+
     }
 
     private void DamageHP(int value)
@@ -107,7 +109,21 @@ public class PlayerController : MonoBehaviour
             Debug.Log("player has taken damage, -10");
             Respawn();
         }
+        
+    public void buyHealth()
+    {
+        if (totalPoints >= healthCost)
+        {
+            health += 10;
+            totalPoints -= healthCost;
+            print("Health purchased. You now have " +health.ToString() + " health and " + totalPoints.ToString() + " points.");
+        }
+        else
+        {
+            print("Not enough points");
+        }
     }
+
 
 
 }
