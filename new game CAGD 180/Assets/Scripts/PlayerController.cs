@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("player has taken damage, -10");
             Respawn();
         }
-        
+    }
     public void buyHealth()
     {
         if (totalPoints >= healthCost)
