@@ -8,25 +8,28 @@ public class Shop : MonoBehaviour
 {
 
     public PlayerController pController;
-
+    private GameObject shop;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        shop = GameObject.Find("Shop Panel");
+        shop.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider col)
     {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Sword")
+        if (col.gameObject.tag == "Player")
         {
-            pController.health += 10;
+            shop.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            shop.SetActive(false);
         }
     }
 

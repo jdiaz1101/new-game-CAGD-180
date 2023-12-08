@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     public int totalPoints = 0;
     public float health = 10;
+    private int healthCost = 10;
 
 
     // Start is called before the first frame update
@@ -76,13 +77,23 @@ public class PlayerController : MonoBehaviour
             transform.LookAt(new Vector3 (pointToLook.x, transform.position.y, pointToLook.z));
         }
 
+
     }
 
-
-    private void OnTriggerEnter(Collider other)
+    public void buyHealth()
     {
-
+        if (totalPoints >= healthCost)
+        {
+            health += 10;
+            totalPoints -= healthCost;
+            print("Health purchased. You now have " +health.ToString() + " health and " + totalPoints.ToString() + " points.");
+        }
+        else
+        {
+            print("Not enough points");
+        }
     }
+
 
 
 }
