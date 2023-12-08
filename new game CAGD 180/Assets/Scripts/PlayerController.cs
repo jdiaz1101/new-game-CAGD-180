@@ -10,6 +10,11 @@ public class PlayerController : MonoBehaviour
     public int totalPoints = 0;
     public float health = 10;
 
+    public int maxHealth = 100;
+
+    public bool canTakeDamage = true;
+
+    private Vector3 startPos;
 
     // Start is called before the first frame update
     void Start()
@@ -17,8 +22,8 @@ public class PlayerController : MonoBehaviour
         
         rb = GetComponent<Rigidbody>();
         mainCam = FindObjectOfType<Camera>();
-        
 
+        startPos = transform.position;
 
     }
 
@@ -78,10 +83,30 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    private void DamageHP(int value)
+    {
+        health -= value;
+    }
+
+    private void Respawn()
+    {
+        GetComponent<Transform>().position = startPos;
+        
+        if (health <= 0)
+        {
+            Debug.Log("Game Over");
+        }
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
-
+        if (other.gameObject.tag == "Enemy")
+        {
+            DamageHP(10);
+            Debug.Log("player has taken damage, -10");
+            Respawn();
+        }
     }
 
 

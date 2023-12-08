@@ -21,19 +21,21 @@ public class ZombieScript : MonoBehaviour
     public int ZombiesThisWave = 0;
     public int zombiesKilled = 0;
 
-    
+    [SerializeField] float attackCD = 3f;
+    [SerializeField] float attackRange = 1f;
+    [SerializeField] float aggroRange = 4f;
 
-
-    
-  
-    
- 
+    float timePassed;
+    float newDestinationCD = 0.5f;
 
     // Start is called before the first frame update
     void Start()
     {
        GetComponent<MeshRenderer>().material = Zombie;
-       
+
+        //pController = GameObject.FindWithTag("Player");
+
+
         
     }
 
@@ -46,7 +48,26 @@ public class ZombieScript : MonoBehaviour
             EnemyDeath();
             pController.totalPoints += 10;
         }
-       // ZombiesKilledText.text = "ZombiesKilled: " + zombiesKilled.ToString();
+        /*
+        // attempting Zombie Ai
+        if (timePassed >= attackCD)
+        {
+            if (Vector3.Distance(pController.transform.position, transform.position) <= attackRange)
+            {
+                timePassed = 0;
+            }
+        }
+        timePassed += Time.deltaTime;
+
+        if (newDestinationCD <= 0 && Vector3.Distance(pController.transform.position, transform.position) <= aggroRange)
+        {
+            newDestinationCD = 0.5f;
+            
+        }
+        */
+
+
+        // ZombiesKilledText.text = "ZombiesKilled: " + zombiesKilled.ToString();
     }
 
     public void OnTriggerEnter(Collider other)

@@ -52,7 +52,7 @@ MonoBehaviour:
   speed: 2
   knockbackForce: 0
   shootStraight: 1
-  goingStraight: 0
+  goingStraight: 1
   damage: 25
 --- !u!114 &-7773549376908525797
 MonoBehaviour:
@@ -61,14 +61,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559958273222686991}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 408a2eb3f94a2a84ebb0024dd56d70ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   impactEffect: {fileID: 1559958273222686991}
   damage: 25
-  knockbackForce: 100
+  knockbackForce: 0
   enemy: {fileID: 1098575597608043076, guid: a0bd23e25733a244696f0384609f7fe4, type: 3}
 --- !u!33 &3306738617367509630
 MeshFilter:

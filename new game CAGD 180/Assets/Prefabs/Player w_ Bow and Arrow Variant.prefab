@@ -47,7 +47,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 1559958273222686991, guid: 50514edf1a3e4d844a78b223901b3fbc, type: 3}
   spawnrate: 1
   fireRate: 0
-  force: 10
+  force: 120
   shootStraight: 0
   arrowShot: 0
   arrow: 0
@@ -194,6 +194,10 @@ PrefabInstance:
     - target: {fileID: 6010939787920854540, guid: ad7572a7424495f49b11f703f11b33c7, type: 3}
       propertyPath: m_Name
       value: Player w_ Bow and Arrow Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010939787920854540, guid: ad7572a7424495f49b11f703f11b33c7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6140426889778341952, guid: ad7572a7424495f49b11f703f11b33c7, type: 3}
       propertyPath: speed

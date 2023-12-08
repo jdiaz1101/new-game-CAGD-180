@@ -1,18 +1,26 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ZombieAi : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    private Vector3 startingPosition;
+
+    private void Start()
     {
-        
+        startingPosition = transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    private Vector3 GetRoamingPosition()
     {
-        
+        return startingPosition + GetRandomDir() * Random.Range(10f, 70f);
     }
+
+    public static Vector3 GetRandomDir()
+    {
+        return new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f)).normalized;
+    }
+
 }
