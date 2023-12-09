@@ -107,7 +107,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!invincible)
+        //changed to be handled on zombieScript
+       /* if (!invincible)
         {
             if (other.gameObject.tag == "Enemy")
             {
@@ -118,6 +119,7 @@ public class PlayerController : MonoBehaviour
                 //Respawn();
             }
         }
+        */
 
     }
     public void buyHealth()

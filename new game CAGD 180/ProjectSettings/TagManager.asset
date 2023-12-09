@@ -10,6 +10,7 @@ TagManager:
   - Sword
   - Store
   - Enemy
+  - PlayerHitBox
   layers:
   - Default
   - TransparentFX
