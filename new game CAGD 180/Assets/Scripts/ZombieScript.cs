@@ -96,6 +96,16 @@ public class ZombieScript : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+
+        //player
+        if(other.gameObject.tag == "PlayerHitBox")
+        {
+            pController.health += -10f;
+            Debug.Log("zombie hit Player");
+        }
+        //player
+
+        //weapons
         if(other.gameObject.tag == "SwordSwingHitBox")
         {
             Debug.Log("colided with swing hit box");
@@ -128,6 +138,7 @@ public class ZombieScript : MonoBehaviour
             EnemyDeath();
             
         }
+        //weapons
     }
 
     IEnumerator IsHurt()
