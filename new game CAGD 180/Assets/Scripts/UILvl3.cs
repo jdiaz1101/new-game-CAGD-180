@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class UIManagerLvl2 : MonoBehaviour
+public class UILvl3 : MonoBehaviour
 {
     public PlayerController pController;
     public TMP_Text pointsText;
@@ -13,7 +13,7 @@ public class UIManagerLvl2 : MonoBehaviour
     public TMP_Text timerText;
 
     float currentTime = 0f;
-    float startingTime = 180f;
+    float startingTime = 0f;
 
     /*
     float currentTime1 = 0f;
@@ -34,7 +34,7 @@ public class UIManagerLvl2 : MonoBehaviour
         pointsText.text = "Points: " + pController.totalPoints;
         healthText.text = "Health: " + pController.health;
 
-        currentTime -= 1 * Time.deltaTime;
+        currentTime += 1 * Time.deltaTime;
         timerText.text = currentTime.ToString();
 
         /*
@@ -42,14 +42,15 @@ public class UIManagerLvl2 : MonoBehaviour
         timerText.text = currentTime1.ToString();
         */
 
+        /*
         if (currentTime <= 0)
         {
             currentTime = 0;
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
 
 
         }
-
+        */
         /*
         if (currentTime1 <= 0)
         {

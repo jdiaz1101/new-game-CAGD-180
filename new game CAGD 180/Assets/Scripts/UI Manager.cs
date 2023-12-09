@@ -15,7 +15,7 @@ public class UIManager : MonoBehaviour
     public TMP_Text timerText;
 
     float currentTime = 0f;
-    float startingTime = 5f;
+    float startingTime = 60f;
 
     /*
     float currentTime1 = 0f;
