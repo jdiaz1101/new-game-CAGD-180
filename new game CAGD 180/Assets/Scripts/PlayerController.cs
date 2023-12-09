@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -64,8 +65,9 @@ public class PlayerController : MonoBehaviour
             transform.position += Vector3.right * speed * Time.deltaTime;
             //transform.rotation = Quaternion.Euler(new Vector3(0f, 90f, 0f));
             //facingRight = true;
-        }  
+        }
 
+        GameOver();
         
     }
 
@@ -124,13 +126,22 @@ public class PlayerController : MonoBehaviour
     {
         if (totalPoints >= healthCost)
         {
-            health += 10;
+            health = 10;
             totalPoints -= healthCost;
             print("Health purchased. You now have " +health.ToString() + " health and " + totalPoints.ToString() + " points.");
         }
         else
         {
             print("Not enough points");
+        }
+    }
+
+    private void GameOver()
+    {
+        if (health <= 0)
+        {
+            SceneManager.LoadScene(1);
+            Debug.Log("Game over");
         }
     }
 
