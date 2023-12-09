@@ -99,7 +99,7 @@ public class ZombieScript : MonoBehaviour
     {
 
         //player
-        if(other.gameObject.tag == "PlayerHitBox")
+        if(other.gameObject.tag == "Player")
         {
             if (invincible == false)
             {
