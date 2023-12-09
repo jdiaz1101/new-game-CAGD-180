@@ -49,6 +49,12 @@ public class ZombieScript : MonoBehaviour
     void Update()
     {
 
+        if (health <= 0 )
+        {
+            spawner.ZombiesKilled += 1;
+
+            pController.totalPoints += 10;
+        }
 
 
         /*
@@ -163,9 +169,7 @@ public class ZombieScript : MonoBehaviour
             health = baseHealth;
             Debug.Log("Zombie Health reset");
 
-            spawner.ZombiesKilled += 1;
-
-            pController.totalPoints += 10;
+            
 
         }
     }
