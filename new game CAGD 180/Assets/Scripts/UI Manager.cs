@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 
 public class UIManager : MonoBehaviour
@@ -35,7 +37,7 @@ public class UIManager : MonoBehaviour
         if( currentTime <= 0)
         {
             currentTime = 0;
-
+            SceneManager.LoadScene(2);
         }
 
     }
