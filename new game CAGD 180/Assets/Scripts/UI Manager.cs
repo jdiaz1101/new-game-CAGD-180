@@ -35,6 +35,7 @@ public class UIManager : MonoBehaviour
         if( currentTime <= 0)
         {
             currentTime = 0;
+
         }
 
     }
