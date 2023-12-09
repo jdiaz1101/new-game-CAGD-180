@@ -98,9 +98,10 @@ public class ZombieScript : MonoBehaviour
     {
 
         //player
-        if(other.gameObject.tag == "PLayerHitBox")
+        if(other.gameObject.tag == "PlayerHitBox")
         {
             pController.health += -10f;
+            Debug.Log("zombie hit Player");
         }
         //player
 

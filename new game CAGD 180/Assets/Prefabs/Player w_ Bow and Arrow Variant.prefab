@@ -211,6 +211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bow
       objectReference: {fileID: 0}
+    - target: {fileID: 8057037812617368904, guid: 0c017c94f6e9b15488e8674d47913481, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8657294250244435073, guid: 0c017c94f6e9b15488e8674d47913481, type: 3}
     m_RemovedGameObjects: []
@@ -436,6 +440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bow (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8057037812617368904, guid: 0c017c94f6e9b15488e8674d47913481, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8657294250244435073, guid: 0c017c94f6e9b15488e8674d47913481, type: 3}
     m_RemovedGameObjects: []
@@ -543,6 +551,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4029c719bf88a114db039e1793ee73c6, type: 2}
+    - target: {fileID: 8057037812617368904, guid: 0c017c94f6e9b15488e8674d47913481, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8657294250244435073, guid: 0c017c94f6e9b15488e8674d47913481, type: 3}
     m_RemovedGameObjects: []
@@ -649,6 +661,10 @@ PrefabInstance:
     - target: {fileID: 3553590991416522917, guid: 0c017c94f6e9b15488e8674d47913481, type: 3}
       propertyPath: m_Name
       value: Bow (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8057037812617368904, guid: 0c017c94f6e9b15488e8674d47913481, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8657294250244435073, guid: 0c017c94f6e9b15488e8674d47913481, type: 3}
