@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 startPos;
 
+    public bool invincible = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -90,6 +93,7 @@ public class PlayerController : MonoBehaviour
         health -= value;
     }
 
+    /*
     private void Respawn()
     {
         GetComponent<Transform>().position = startPos;
@@ -99,16 +103,20 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Game Over");
         }
     }
-
+    */
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (!invincible)
         {
-            DamageHP(10);
-            Debug.Log("player has taken damage, -10");
-            Respawn();
+            if (other.gameObject.tag == "Enemy")
+            {
+                DamageHP(3);
+                Debug.Log("player has taken damage, -10");
+                //Respawn();
+            }
         }
+
     }
     public void buyHealth()
     {
@@ -124,6 +132,28 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    IEnumerator Invincible(float secondsToWait)
+    {
+        invincible = true;
+        yield return new WaitForSeconds(secondsToWait);
+        invincible = false;
+    }
 
+    public IEnumerator Blink()
+    {
+        for (int index = 0; index < 10; index++)
+        {
+            if (index % 2 == 0)
+            {
+                GetComponent<MeshRenderer>().enabled = false;
+            }
+            else
+            {
+                GetComponent<MeshRenderer>().enabled = true;
+            }
+            yield return new WaitForSeconds(.5f);
+        }
+        GetComponent<MeshRenderer>().enabled = true;
+    }
 
 }
