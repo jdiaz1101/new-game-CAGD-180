@@ -112,6 +112,8 @@ public class PlayerController : MonoBehaviour
             if (other.gameObject.tag == "Enemy")
             {
                 DamageHP(3);
+                StartCoroutine(Invincible(2));
+                StartCoroutine(Blink());
                 Debug.Log("player has taken damage, -10");
                 //Respawn();
             }
@@ -141,7 +143,7 @@ public class PlayerController : MonoBehaviour
 
     public IEnumerator Blink()
     {
-        for (int index = 0; index < 10; index++)
+        for (int index = 0; index < 2; index++)
         {
             if (index % 2 == 0)
             {
