@@ -178,8 +178,9 @@ public class ZombieScript : MonoBehaviour
 
             health = baseHealth;
             Debug.Log("Zombie Health reset");
+            pController.totalPoints += 10;
 
-            
+
 
         }
     }
