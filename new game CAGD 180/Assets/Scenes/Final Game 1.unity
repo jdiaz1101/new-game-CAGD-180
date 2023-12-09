@@ -6082,6 +6082,10 @@ PrefabInstance:
       value: UI
       objectReference: {fileID: 0}
     - target: {fileID: 2587083534539524276, guid: 62c1b944abfa6444c92f415036ee59aa, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587083534539524276, guid: 62c1b944abfa6444c92f415036ee59aa, type: 3}
       propertyPath: timerText
       value: 
       objectReference: {fileID: 623971217}
@@ -6095,13 +6099,59 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 130511304909944769, guid: 62c1b944abfa6444c92f415036ee59aa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 623971219}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 267101408787883123, guid: 62c1b944abfa6444c92f415036ee59aa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1489489463}
   m_SourcePrefab: {fileID: 100100000, guid: 62c1b944abfa6444c92f415036ee59aa, type: 3}
 --- !u!224 &1489489459 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 130511304909944769, guid: 62c1b944abfa6444c92f415036ee59aa, type: 3}
   m_PrefabInstance: {fileID: 1489489458}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1489489460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 267101408787883123, guid: 62c1b944abfa6444c92f415036ee59aa, type: 3}
+  m_PrefabInstance: {fileID: 1489489458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1489489461 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1366742022085557069, guid: 62c1b944abfa6444c92f415036ee59aa, type: 3}
+  m_PrefabInstance: {fileID: 1489489458}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1489489462 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8748514299378311028, guid: 62c1b944abfa6444c92f415036ee59aa, type: 3}
+  m_PrefabInstance: {fileID: 1489489458}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1489489463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489489460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6b5738aa60f114ab5e62e8cdc3e971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pController: {fileID: 1186379010}
+  pointsText: {fileID: 1489489462}
+  healthText: {fileID: 1489489461}
+  timerText: {fileID: 623971217}
 --- !u!1 &1521612145
 GameObject:
   m_ObjectHideFlags: 0
