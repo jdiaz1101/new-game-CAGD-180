@@ -5,9 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-
-
-public class UIManager : MonoBehaviour
+public class UIManagerLvl2 : MonoBehaviour
 {
     public PlayerController pController;
     public TMP_Text pointsText;
@@ -15,12 +13,13 @@ public class UIManager : MonoBehaviour
     public TMP_Text timerText;
 
     float currentTime = 0f;
-    float startingTime = 5f;
+    float startingTime = 10f;
 
     /*
     float currentTime1 = 0f;
     float startingTime1 = 5f;
     */
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,19 +37,17 @@ public class UIManager : MonoBehaviour
         currentTime -= 1 * Time.deltaTime;
         timerText.text = currentTime.ToString();
 
-
-        if( currentTime <= 0)
         /*
         currentTime1 -= 1 * Time.deltaTime;
         timerText.text = currentTime1.ToString();
         */
 
-        if ( currentTime <= 0)
+        if (currentTime <= 0)
         {
             currentTime = 0;
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
 
-            
+
         }
 
         /*
