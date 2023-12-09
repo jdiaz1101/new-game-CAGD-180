@@ -137,11 +137,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4485284326379111998, guid: a0bd23e25733a244696f0384609f7fe4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.1974661
+      value: 31.6
       objectReference: {fileID: 0}
     - target: {fileID: 4485284326379111998, guid: a0bd23e25733a244696f0384609f7fe4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.22
+      value: 20.3
       objectReference: {fileID: 0}
     - target: {fileID: 4485284326379111998, guid: a0bd23e25733a244696f0384609f7fe4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -416,33 +416,21 @@ PrefabInstance:
       propertyPath: pController
       value: 
       objectReference: {fileID: 796603377}
-    - target: {fileID: 1353707396820506709, guid: a0bd23e25733a244696f0384609f7fe4, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.9389113
-      objectReference: {fileID: 0}
-    - target: {fileID: 1353707396820506709, guid: a0bd23e25733a244696f0384609f7fe4, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.8719075
-      objectReference: {fileID: 0}
-    - target: {fileID: 1353707396820506709, guid: a0bd23e25733a244696f0384609f7fe4, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.9389113
-      objectReference: {fileID: 0}
     - target: {fileID: 4207439287198442141, guid: a0bd23e25733a244696f0384609f7fe4, type: 3}
       propertyPath: m_Name
       value: Zombie
       objectReference: {fileID: 0}
     - target: {fileID: 4485284326379111998, guid: a0bd23e25733a244696f0384609f7fe4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.038285315
+      value: -20.4
       objectReference: {fileID: 0}
     - target: {fileID: 4485284326379111998, guid: a0bd23e25733a244696f0384609f7fe4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3
+      value: 21.8
       objectReference: {fileID: 0}
     - target: {fileID: 4485284326379111998, guid: a0bd23e25733a244696f0384609f7fe4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.91383
+      value: 11.1
       objectReference: {fileID: 0}
     - target: {fileID: 4485284326379111998, guid: a0bd23e25733a244696f0384609f7fe4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -828,14 +816,6 @@ PrefabInstance:
     - target: {fileID: 4626405772619400631, guid: f123102e4ec65a249af4fd5cc7c34a50, type: 3}
       propertyPath: m_Name
       value: Player w/ Bow and Arrow
-      objectReference: {fileID: 0}
-    - target: {fileID: 4626405772619400631, guid: f123102e4ec65a249af4fd5cc7c34a50, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5005439388634085001, guid: f123102e4ec65a249af4fd5cc7c34a50, type: 3}
-      propertyPath: force
-      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

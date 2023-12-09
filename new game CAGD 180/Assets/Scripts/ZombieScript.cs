@@ -11,6 +11,8 @@ public class ZombieScript : MonoBehaviour
     public GameObject zombiePrefab;
 
     public int health = 100;
+    public int baseHealth = 100;
+
     public Material Zombie;
     public Material ZombieHurt;
     public PlayerController pController;
@@ -18,7 +20,7 @@ public class ZombieScript : MonoBehaviour
     public TMP_Text ZombiesKilledText;
     public ZombieSpawnerScript spawner;
 
-
+    private Vector3 startPos;
   
 
     [SerializeField] float attackCD = 3f;
@@ -34,8 +36,11 @@ public class ZombieScript : MonoBehaviour
         spawner.ZombiesKilled = 0;
        GetComponent<MeshRenderer>().material = Zombie;
 
+
         //pController = GameObject.FindWithTag("Player");
 
+        startPos = transform.position;
+        
 
         
     }
@@ -43,11 +48,15 @@ public class ZombieScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
+
+        /*
         if (health <= 0)
         {
             //StartCoroutine(Death());
             spawner.ZombiesKilled += 1;
-            EnemyDeath();
+            //EnemyDeath();
             pController.totalPoints += 10;
             
         }
@@ -55,6 +64,8 @@ public class ZombieScript : MonoBehaviour
         {
             spawner.waveReady = true;
         }
+
+        */
         /*
         // attempting Zombie Ai
         if (timePassed >= attackCD)
@@ -84,6 +95,9 @@ public class ZombieScript : MonoBehaviour
             Debug.Log("colided with swing hit box");
             health += -50;
             StartCoroutine(IsHurt());
+            //EnemyDeath();
+            
+            EnemyDeath();
             
         }
         if (other.gameObject.tag == "StabHitBox")
@@ -91,7 +105,10 @@ public class ZombieScript : MonoBehaviour
             Debug.Log("colided with stab hit box");
             health += -33;
             StartCoroutine(IsHurt());
-
+            //EnemyDeath();
+            
+            EnemyDeath();
+            
         }
         if (other.gameObject.tag == "Arrow")
         {
@@ -100,7 +117,10 @@ public class ZombieScript : MonoBehaviour
             StartCoroutine(IsHurt());
             
             Debug.Log("Arrow hits");
-
+            //EnemyDeath();
+            
+            EnemyDeath();
+            
         }
     }
 
@@ -131,9 +151,22 @@ public class ZombieScript : MonoBehaviour
     */
     private void EnemyDeath()
     {
+
+        //GetComponent<Transform>().position = startPos;
+
         if (health <= 0)
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
+            
+            transform.position = startPos;
+
+            health = baseHealth;
+            Debug.Log("Zombie Health reset");
+
+            spawner.ZombiesKilled += 1;
+
+            pController.totalPoints += 10;
+
         }
     }
 
@@ -144,5 +177,7 @@ public class ZombieScript : MonoBehaviour
         EnemyDeath();
 
     }
+
+    
 
 }
