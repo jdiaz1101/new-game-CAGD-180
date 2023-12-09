@@ -254,9 +254,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 0}
   health: 100
+  baseHealth: 100
   Zombie: {fileID: 2100000, guid: 7a39645481187024a8bb5a775a3f573e, type: 2}
   ZombieHurt: {fileID: 2100000, guid: 6b387df3ce32c1a4fb21a97498bc3072, type: 2}
-  pController: {fileID: 6140426889778341952, guid: ad7572a7424495f49b11f703f11b33c7, type: 3}
+  pController: {fileID: 0}
   ZombiesKilledText: {fileID: 0}
   spawner: {fileID: 6777138937770509833, guid: b9750ef8456e7504c93feded3877f1b9, type: 3}
   attackCD: 3
@@ -275,7 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  target: {fileID: 3144125774238974141, guid: f123102e4ec65a249af4fd5cc7c34a50, type: 3}
+  target: {fileID: 0}
   minimumDistance: 0
 --- !u!1 &4977706449534267617
 GameObject:
