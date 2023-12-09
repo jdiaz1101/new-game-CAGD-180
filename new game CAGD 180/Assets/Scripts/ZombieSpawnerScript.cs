@@ -4,21 +4,31 @@ using UnityEngine;
 
 public class ZombieSpawnerScript : MonoBehaviour
 {
-    public GameObject zombie;
+    public GameObject zombieInstance;
+
+    public int ZombiesKilled;
+    public bool waveReady = true;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        NewWave();
+   
+        ZombiesKilled = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (waveReady)
+        {
+            NewWave();
+           waveReady = false;
+        }
     }
 
     public void NewWave()
     {
-        Instantiate(zombie, transform.position, transform.rotation);
+        Instantiate(zombieInstance, transform.position, transform.rotation);
     }
 }

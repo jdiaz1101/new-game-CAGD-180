@@ -16,10 +16,10 @@ public class ZombieScript : MonoBehaviour
     public PlayerController pController;
 
     public TMP_Text ZombiesKilledText;
+    public ZombieSpawnerScript spawner;
 
 
-    public int ZombiesThisWave = 0;
-    public int zombiesKilled = 0;
+  
 
     [SerializeField] float attackCD = 3f;
     [SerializeField] float attackRange = 1f;
@@ -31,6 +31,7 @@ public class ZombieScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spawner.ZombiesKilled = 0;
        GetComponent<MeshRenderer>().material = Zombie;
 
         //pController = GameObject.FindWithTag("Player");
@@ -45,8 +46,14 @@ public class ZombieScript : MonoBehaviour
         if (health <= 0)
         {
             //StartCoroutine(Death());
+            spawner.ZombiesKilled += 1;
             EnemyDeath();
             pController.totalPoints += 10;
+            
+        }
+        if (spawner.ZombiesKilled == 4)
+        {
+            spawner.waveReady = true;
         }
         /*
         // attempting Zombie Ai

@@ -44,4 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee97460797c18f846916eb4a5f24ba96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombie: {fileID: 4207439287198442141, guid: a0bd23e25733a244696f0384609f7fe4, type: 3}
+  zombieInstance: {fileID: 4207439287198442141, guid: a0bd23e25733a244696f0384609f7fe4, type: 3}
+  ZombiesKilled: 175
+  waveReady: 1
