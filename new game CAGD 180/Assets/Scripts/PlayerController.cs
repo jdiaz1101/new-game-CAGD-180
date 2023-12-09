@@ -147,12 +147,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /*
     IEnumerator Invincible(float secondsToWait)
     {
         invincible = true;
         yield return new WaitForSeconds(secondsToWait);
         invincible = false;
     }
+    */
 
     public IEnumerator Blink()
     {
