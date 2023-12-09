@@ -142,7 +142,7 @@ public class PlayerController : MonoBehaviour
     {
         if (health <= 0)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
             Debug.Log("Game over");
         }
     }
