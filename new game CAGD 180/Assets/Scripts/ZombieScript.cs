@@ -12,6 +12,7 @@ public class ZombieScript : MonoBehaviour
 
     public int health = 100;
     public int baseHealth = 100;
+    public bool invincible = false;
 
     public Material Zombie;
     public Material ZombieHurt;
@@ -100,8 +101,13 @@ public class ZombieScript : MonoBehaviour
         //player
         if(other.gameObject.tag == "PlayerHitBox")
         {
-            pController.health += -10f;
+            if (invincible == false)
+            {
+            pController.health += -4f;
             Debug.Log("zombie hit Player");
+            invincible = true;
+            StartCoroutine(Invincible());
+            }
         }
         //player
 
@@ -148,6 +154,12 @@ public class ZombieScript : MonoBehaviour
         GetComponent<MeshRenderer>().material = ZombieHurt;
             yield return new WaitForSeconds(0.3f);
         GetComponent<MeshRenderer>().material = Zombie;
+    }
+    IEnumerator Invincible()
+    {
+       
+        yield return new WaitForSeconds(1f);
+        invincible = false;
     }
 
 
