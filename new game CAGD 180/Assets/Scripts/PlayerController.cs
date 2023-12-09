@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     public int maxHealth = 100;
 
-    public bool canTakeDamage = true;
+    //public bool canTakeDamage = true;
 
     private Vector3 startPos;
 
