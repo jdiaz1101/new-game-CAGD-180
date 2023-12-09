@@ -18,7 +18,6 @@ public class UIManager : MonoBehaviour
     float startingTime = 60f;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +32,7 @@ public class UIManager : MonoBehaviour
 
         currentTime -= 1 * Time.deltaTime;
         timerText.text = currentTime.ToString();
+
 
         if( currentTime <= 0)
         {
